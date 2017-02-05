@@ -3,3 +3,11 @@ install:
 - mvn install
 jdk:
 - oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: T9Tn2GXJZJ7/sfbUWoXALefNiia3WWiLfXrj9ZfS3U33+o+2nLU58CPfGXbbaYLQ5lC9hCM7/CvtNzMoj7ISlYNQ0rveD6OLTAoDOPLegyjYqnBjpoH8eDorMRyQjMTIqKdnPj27nnHnvB/qtPMYY/bYsOFBlXdlBY0/xQ/i75VLOaCu3CgtwamheAa2nu64bOt+/LxLTYpXi3ihWerp8ODl6N5fEyZCnoHJJLNrs7cVHHBARs3et6+gwaoe9uBUQr/II9fn/6YgoglzRAA2U2oY6qn+bVpKClY5vSJqyMexhqHPZMYzCTW7gjH5LqKyTTAXWj+gnjeShwaYesgLQ2tvU7yNrHw0BmhFERV4f2I7xuVIK4Q9ArA4vQOLh6gN6zgKTVlVoR+Zmc3CNFqSYpmWXZE2RiyjKL/5e3D5+k6FW4+9kqoNanlfMLyizjh3lVPC8pabiQIoOof1SJNG+Td4lEDZ8MGRgCwobXYEyOFbCWF1pwY4F2JprL6SUtGrzRoygMQjDL0lCW8B7dHC0NZD7GbcXRJkkcLu22x2twd3CiXJ/sI+mcyz7Xt4itwMGoUA26ohnRwFJGZtNRo5kvbRwXQ+5GjW3XR43615sDnBxp68GyVvPkkwGDgwfhQxvIEWFcdrK4pT+cD2UmERKgB1PVhPzI7lQVk3AfTecbE=
+  app: aimee-addressbook
+  on:
+    repo: AimeeL/addressbook
+    branch: todo_tasks

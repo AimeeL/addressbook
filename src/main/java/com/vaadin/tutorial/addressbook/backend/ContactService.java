@@ -24,6 +24,7 @@ public class ContactService {
             "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor",
             "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin",
             "Thompson", "Young", "King", "Robinson" };
+    static String[] tasks = { "Save money", "Save life", "Have fun", "Save world", "Love pets", "Control motion"};
 
     private static ContactService instance;
 
@@ -43,7 +44,10 @@ public class ContactService {
                 contact.setPhone("+ 358 555 " + (100 + r.nextInt(900)));
                 cal.set(1930 + r.nextInt(70),
                         r.nextInt(11), r.nextInt(28));
+                contact.setTask(tasks[r.nextInt(tasks.length)]);
                 contact.setBirthDate(cal.getTime());
+                contact.setStartDate(cal.getTime());
+                contact.setExpectedEndDate(cal.getTime());
                 contactService.save(contact);
             }
             instance = contactService;
